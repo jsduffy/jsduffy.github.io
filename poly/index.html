@@ -6,6 +6,8 @@
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
     <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
   </head>
   <body unresolved fullbleed>
   	<core-scaffold id="scaffold">
@@ -30,7 +32,10 @@
   			<core-icon-button icon="refresh"></core-icon-button>
   			<core-icon-button icon="add"></core-icon-button>
 		</core-toolbar>
-    	<div>Main content</div>
+    	<div layout horizontal center-center fit>
+  		<!-- fill with pages -->
+  		main content here
+		</div>
   	</core-scaffold>
   </body>
 </html>
