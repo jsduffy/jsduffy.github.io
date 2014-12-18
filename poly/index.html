@@ -95,6 +95,7 @@ core-menu > paper-item.core-selected {
   			<template repeat="{{page in pages}}">
     			<section hash="{{page.hash}}" layout vertical center-center>
       			<div>{{page.name}}</div>
+      			<div>{{page.content}}</div>
     			</section>
   			</template>
 		</core-animated-pages>
@@ -106,9 +107,9 @@ core-menu > paper-item.core-selected {
   <script>
   var template = document.querySelector('template[is="auto-binding"]');
   template.pages = [
-    {name: 'Students', hash: 'students'},
-    {name: 'Teachers', hash: 'teachers'},
-    {name: 'Support', hash: 'support'}
+    {name: 'Students', content:'stuff for kids!', hash: 'students'},
+    {name: 'Teachers', content:'stuff for teachers!', hash: 'teachers'},
+    {name: 'Support', content:'stuff for support!',hash: 'support'}
   ];
 </script>
   
