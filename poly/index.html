@@ -9,7 +9,20 @@
   </head>
   <body unresolved fullbleed>
   	<core-scaffold id="scaffold">
-    	<nav>Left drawer</nav>
+    	<nav>
+		  <core-toolbar><span>Single Page Polymer</span></core-toolbar>
+		  <core-menu selected="0">
+    		<paper-item noink>
+    		  <core-icon icon="label-outline"></core-icon>
+    		  <a href="#one">Single</a>
+    		</paper-item>
+    		<paper-item noink>
+    		  <core-icon icon="label-outline"></core-icon>
+    		  <a href="#two">page</a>
+    		</paper-item>
+    ...
+  			</core-menu>
+		</nav>
     	<core-toolbar tool>Application</core-toolbar>
     	<div>Main content</div>
   	</core-scaffold>
