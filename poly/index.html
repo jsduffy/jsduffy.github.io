@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Polymer test run 8</title>
+  	<title>Polymer test run 9</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
     <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/core-a11y-keys/core-a11y-keys.html">
     <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-menu/core-menu.html">
@@ -70,6 +71,11 @@ core-menu > paper-item.core-selected {
   </head>
   <body unresolved fullbleed>
   <template is="auto-binding">
+  	
+  	<core-a11y-keys target="{{parentElement}}"
+                keys="up down left right space space+shift"
+                on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
+  
   	<core-scaffold id="scaffold">
     	<nav>
 		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
@@ -111,6 +117,27 @@ core-menu > paper-item.core-selected {
     {name: 'Teachers', content:'stuff for teachers!', hash: 'teachers'},
     {name: 'Support', content:'stuff for support!',hash: 'support'}
   ];
+  
+  
+  template.keyHandler = function(e, detail, sender) {
+  var pages = document.querySelector('#pages');
+
+  switch (detail.key) {
+    case 'left':
+    case 'up':
+      pages.selectPrevious();
+      break;
+    case 'right':
+    case 'down':
+      pages.selectNext();
+      break;
+    case 'space':
+      detail.shift ? pages.selectPrevious() : pages.selectNext();
+      break;
+  }
+};
+  
+  
 </script>
   
   
