@@ -1,0 +1,21 @@
+{
+  "name": "poly",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jsduffy/jsduffy.github.io",
+  "authors": [
+    "Justin <jsduffy@gmail.com>"
+  ],
+  "description": "polymer test site",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}
