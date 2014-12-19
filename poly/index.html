@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Polymer test run 11</title>
+  	<title>Polymer test run 12</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -11,6 +11,7 @@
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-menu/core-menu.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
+	<link rel="import" href="bower_components/core-collapse/core-collapse.html">
     
     <!--these components are used to manage the views and transitions -->
     <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
@@ -81,6 +82,13 @@ core-menu > paper-item.core-selected {
     	<nav>
 		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
 		  <core-menu valueattr="hash" selected="{{route}}">
+
+		  		<button on-click="{{toggle}}">toggle collapse</button>
+
+<core-collapse id="collapse">
+  Content goes here...
+</core-collapse>
+
 			  <template repeat="{{page in pages}}">
     			<paper-item hash="{{page.hash}}" noink>
       			<core-icon icon="label-outline"></core-icon>
@@ -118,6 +126,12 @@ core-menu > paper-item.core-selected {
     {name: 'Teachers', content:'stuff for teachers!', hash: 'teachers'},
     {name: 'Support', content:'stuff for support!',hash: 'support'}
   ];
+  
+  
+  toggle: function() {
+  this.$.collapse.toggle();
+}
+
   </script>
   
   <!--script for keyboard navigation... not working-->
