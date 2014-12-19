@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>test 28</title>
+  	<title>test 27</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -106,11 +106,12 @@ core-menu > paper-item.core-selected {
   </core-menu>
 </nav>
     <!-- flex makes the bar span across the top of the main content area -->
-  <core-scroll-header-panel flex>
-    <core-toolbar>
-      <div>Hello World!</div>
-    </core-toolbar>
-  </core-scroll-header-panel>
+<core-toolbar class="medium-tall" tool flex>
+  <!-- flex spaces this element and jusifies the icons to the right-side -->
+  <div flex>Application</div>
+  <core-icon-button icon="refresh"></core-icon-button>
+  <core-icon-button icon="add"></core-icon-button>
+</core-toolbar>
     <div layout horizontal center-center fit>
   <core-animated-pages  valueattr="hash" selected="{{route}}" transitions="slide-from-right">
     <section hash="students" layout vertical center-center>
