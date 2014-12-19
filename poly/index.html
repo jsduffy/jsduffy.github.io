@@ -12,7 +12,6 @@
     <link rel="import" href="bower_components/core-menu/core-menu.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
 	<link rel="import" href="bower_components/core-collapse/core-collapse.html">
-	<link rel="import" href="bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
     
     <!--these components are used to manage the views and transitions -->
     <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
@@ -81,7 +80,7 @@ core-menu > paper-item.core-selected {
   
   	<core-scaffold id="scaffold">
     	<nav>
-		  <core-toolbar><span>STEM Egypts</span></core-toolbar>
+		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
 		  <core-menu valueattr="hash" selected="{{route}}">
 
 
@@ -94,14 +93,12 @@ core-menu > paper-item.core-selected {
 		</core-menu>
 		</nav>
     	<!-- flex makes the bar span across the top of the main content area -->
-    	<core-scroll-header-panel>
 		<core-toolbar tool flex>
   			<!-- flex spaces this element and jusifies the icons to the right-side -->
   			<div flex>Application</div>
   			<core-icon-button icon="refresh"></core-icon-button>
   			<core-icon-button icon="add"></core-icon-button>
 		</core-toolbar>
-		</core-scroll-header-panel>
 		<div layout horizontal center-center fit>
   		<core-animated-pages valueattr="hash" selected="{{route}}"
                      transitions="slide-from-right">
