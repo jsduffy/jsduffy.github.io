@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Polymer test run 10</title>
+  	<title>Polymer test run 11</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -72,11 +72,12 @@ core-menu > paper-item.core-selected {
   <body unresolved fullbleed>
   <template is="auto-binding">
   	
+  	<!--this is not working right now-->
   	<core-a11y-keys target="{{parentElement}}"
                 keys="up down left right space space+shift"
                 on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
   
-  	<core-scaffold id="scaffold">
+  	<core-scaffold id="scaffold" mode="cover">
     	<nav>
 		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
 		  <core-menu valueattr="hash" selected="{{route}}">
@@ -118,6 +119,8 @@ core-menu > paper-item.core-selected {
     {name: 'Support', content:'stuff for support!',hash: 'support'}
   ];
   </script>
+  
+  <!--script for keyboard navigation... not working-->
   <script>
   template.keyHandler = function(e, detail, sender) {
   var pages = document.querySelector('#pages');
