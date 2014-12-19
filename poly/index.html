@@ -71,81 +71,39 @@ core-menu > paper-item.core-selected {
     
   </head>
   <body unresolved fullbleed>
-  <template is="auto-binding">
-  	
-  	<!--this is not working right now-->
-  	<core-a11y-keys target="{{parentElement}}"
-                keys="up down left right space space+shift"
-                on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
   
   	<core-scaffold id="scaffold">
     	<nav>
-		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
-		  <core-menu valueattr="hash" selected="{{route}}">
+    <core-toolbar>
+      <div>Application 7!</div>
+    </core-toolbar>
+    <div>
 
 
-			  <template repeat="{{page in pages}}">
-    			<paper-item hash="{{page.hash}}" noink>
-      			<core-icon icon="label-outline"></core-icon>
-      			<a href="#{{page.hash}}">{{page.name}}</a>
-    			</paper-item>
-  			</template>
-		</core-menu>
+
+	  <core-item icon="social:school" label="Get Started">
+    <a href="/docs/start/getting-the-code.html"></a>
+  </core-item>
+  
+  
+  <div class="heading" onclick="document.querySelector('#collapse1').toggle();">Collapse #1</div>
+  <core-collapse id="collapse1">
+    <div class="content">
+      <div>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua periculis has ut, at eos discere deleniti sensibus. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua periculis has ut, at eos discere deleniti sensibus.</div>
+    </div>
+  </core-collapse>
+  <hr>
+
+</div>
 		</nav>
     	<!-- flex makes the bar span across the top of the main content area -->
-		<core-toolbar tool flex>
-  			<!-- flex spaces this element and jusifies the icons to the right-side -->
-  			<div flex>Application</div>
-  			<core-icon-button icon="refresh"></core-icon-button>
-  			<core-icon-button icon="add"></core-icon-button>
-		</core-toolbar>
-		<div layout horizontal center-center fit>
-  		<core-animated-pages valueattr="hash" selected="{{route}}"
-                     transitions="slide-from-right">
-  			<template repeat="{{page in pages}}">
-    			<section hash="{{page.hash}}" layout vertical center-center>
-      			<div>{{page.name}}</div>
-      			<div>{{page.content}}</div>
-    			</section>
-  			</template>
-		</core-animated-pages>
-		</div>
+    <core-toolbar flex>
+      <core-icon-button icon="menu" core-drawer-toggle></core-icon-button>
+      <div>Title</div>
+    </core-toolbar>
+    <div> Main content... </div>
   	</core-scaffold>
-  </template>
-  
-  
-  <script>
-  var template = document.querySelector('template[is="auto-binding"]');
-  template.pages = [
-    {name: 'Students', content:'stuff for kids!', hash: 'students'},
-    {name: 'Teachers', content:'stuff for teachers!', hash: 'teachers'},
-    {name: 'Support', content:'stuff for support!',hash: 'support'}
-  ];
-  
 
-  </script>
-  
-  <!--script for keyboard navigation... not working-->
-  <script>
-  template.keyHandler = function(e, detail, sender) {
-  var pages = document.querySelector('#pages');
-
-  switch (detail.key) {
-    case 'left':
-    case 'up':
-      pages.selectPrevious();
-      break;
-    case 'right':
-    case 'down':
-      pages.selectNext();
-      break;
-    case 'space':
-      detail.shift ? pages.selectPrevious() : pages.selectNext();
-      break;
-  }
-};
-</script>
-  
   
   </body>
 </html>
