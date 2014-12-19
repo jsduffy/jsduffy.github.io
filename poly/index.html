@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>25</title>
+  	<title>26</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -95,7 +95,14 @@ core-menu > paper-item.core-selected {
       <core-icon icon="label-outline"></core-icon>
       <a href="#teachers2">Teacher Page 2</a>
     </paper-item>
+    <paper-item hash="teachers3" noink>
+      <core-icon icon="label-outline"></core-icon>
+      <a href="#teachers3">Teacher Page 2</a>
+    </paper-item>
   </core-collapse>
+  
+  	<core-icon icon="account-balance" label="support"></core-icon>
+  
   </core-menu>
 </nav>
     <!-- flex makes the bar span across the top of the main content area -->
@@ -113,7 +120,6 @@ core-menu > paper-item.core-selected {
     <section hash="students2" layout vertical center-center>
       <div>
       Student Page 1
-      <core-icon icon="polymer"></core-icon>
       </div>
     </section>
     <section hash="teachers" layout vertical center-center>
@@ -124,6 +130,9 @@ core-menu > paper-item.core-selected {
     </section>
     <section hash="teachers2" layout vertical center-center>
       <div>Teacher Materials 2</div>
+    </section>
+    <section hash="teachers3" layout vertical center-center>
+      <div>Teacher Materials 3</div>
     </section>
   </core-animated-pages>
 </div>
