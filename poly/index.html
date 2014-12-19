@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>22-test</title>
+  	<title>23</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -73,11 +73,18 @@ core-menu > paper-item.core-selected {
     <nav>
   <core-toolbar><span>Single Page Polymer</span></core-toolbar>
   <core-menu valueattr="hash" selected="{{route}}">
+  
+  <core-item icon="social:school" label="students" onclick="document.querySelector('#smenu').toggle();">
+  </core-item>
+  <core-collapse id="smenu">
     <paper-item hash="students" noink>
       <core-icon icon="label-outline"></core-icon>
       <a href="#students">Student Page</a>
     </paper-item>
-	<core-item icon="social:school" label="teachers" onclick="document.querySelector('#tmenu').toggle();">
+   </core-collapse>
+    
+    
+	<core-item icon="social:people" label="teachers" onclick="document.querySelector('#tmenu').toggle();">
   	</core-item>
   	  <core-collapse id="tmenu">
     <paper-item hash="teachers1" noink>
