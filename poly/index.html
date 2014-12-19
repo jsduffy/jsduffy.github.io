@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>16</title>
+  	<title>17</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -81,9 +81,14 @@ core-menu > paper-item.core-selected {
       <core-icon icon="label-outline"></core-icon>
       <a href="#teachers">Teacher Page</a>
     </paper-item>
-	<core-item icon="social:school" label="Get Started">
+	<core-item icon="social:school" label="Get Started" onclick="document.querySelector('#collapse1').toggle();">
     <a href="/docs/start/getting-the-code.html"></a>
-  </core-item>
+  	</core-item>
+  	  <core-collapse id="collapse1">
+    <div class="content">
+      <div>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua periculis has ut, at eos discere deleniti sensibus. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua periculis has ut, at eos discere deleniti sensibus.</div>
+    </div>
+  </core-collapse>
   </core-menu>
 </nav>
     <!-- flex makes the bar span across the top of the main content area -->
