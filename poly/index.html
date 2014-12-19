@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>23</title>
+  	<title>24</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -71,7 +71,7 @@ core-menu > paper-item.core-selected {
   <template is="auto-binding">
   <core-scaffold id="scaffold">
     <nav>
-  <core-toolbar><span>Single Page Polymer</span></core-toolbar>
+  <core-toolbar><span>Egypt STEM Schools</span></core-toolbar>
   <core-menu valueattr="hash" selected="{{route}}">
   
   <core-item icon="social:school" label="students" onclick="document.querySelector('#smenu').toggle();">
@@ -108,7 +108,13 @@ core-menu > paper-item.core-selected {
     <div layout horizontal center-center fit>
   <core-animated-pages  valueattr="hash" selected="{{route}}" transitions="slide-from-right">
     <section hash="students" layout vertical center-center>
-      <div>Student Materials</div>
+      <div>Student Home</div>
+    </section>
+    <section hash="students2" layout vertical center-center>
+      <div>Student Page 1</div>
+    </section>
+    <section hash="teachers" layout vertical center-center>
+      <div>Teacher Home</div>
     </section>
     <section hash="teachers1" layout vertical center-center>
       <div>Teacher Materials 1</div>
