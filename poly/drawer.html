@@ -69,7 +69,13 @@ core-menu > paper-item.core-selected {
     <core-toolbar>
       <div>Application!</div>
     </core-toolbar>
-    <div> Drawer content... </div>
+    <div>
+    <button on-click="{{toggle}}">toggle collapse</button>
+
+<core-collapse id="collapse">
+  Content goes here...
+</core-collapse>
+</div>
   </core-header-panel>
   <core-header-panel main>
     <core-toolbar>
@@ -79,6 +85,10 @@ core-menu > paper-item.core-selected {
     <div> Main content... </div>
   </core-header-panel>
 	</core-drawer-panel>
+  
+  
+  
+  
   
   </body>
   </html>
