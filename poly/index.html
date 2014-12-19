@@ -83,11 +83,6 @@ core-menu > paper-item.core-selected {
 		  <core-toolbar><span>STEM Egypt</span></core-toolbar>
 		  <core-menu valueattr="hash" selected="{{route}}">
 
-		  		<button on-click="{{toggle}}">toggle collapse</button>
-
-<core-collapse id="collapse">
-  Content goes here...
-</core-collapse>
 
 			  <template repeat="{{page in pages}}">
     			<paper-item hash="{{page.hash}}" noink>
@@ -127,10 +122,6 @@ core-menu > paper-item.core-selected {
     {name: 'Support', content:'stuff for support!',hash: 'support'}
   ];
   
-  
-  toggle: function() {
-  this.$.collapse.toggle();
-}
 
   </script>
   
