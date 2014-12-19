@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>19</title>
+  	<title>20</title>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the components using an HTML Import -->
@@ -77,12 +77,16 @@ core-menu > paper-item.core-selected {
       <core-icon icon="label-outline"></core-icon>
       <a href="#students">Student Page</a>
     </paper-item>
-	<core-item icon="social:school" label="teachers" onclick="document.querySelector('#teachermenu').toggle();">
+	<core-item icon="social:school" label="teachers" onclick="document.querySelector('#tmenu').toggle();">
   	</core-item>
-  	  <core-collapse id="teachermenu">
-    <paper-item hash="teachers" noink>
+  	  <core-collapse id="tmenu">
+    <paper-item hash="teachers1" noink>
       <core-icon icon="label-outline"></core-icon>
-      <a href="#teachers">Teacher Page</a>
+      <a href="#teachers1">Teacher Page 1</a>
+    </paper-item>
+    <paper-item hash="teachers2" noink>
+      <core-icon icon="label-outline"></core-icon>
+      <a href="#teachers2">Teacher Page 2</a>
     </paper-item>
   </core-collapse>
   </core-menu>
@@ -99,8 +103,11 @@ core-menu > paper-item.core-selected {
     <section hash="students" layout vertical center-center>
       <div>Student Materials</div>
     </section>
-    <section hash="teachers" layout vertical center-center>
-      <div>Teacher Materials</div>
+    <section hash="teachers1" layout vertical center-center>
+      <div>Teacher Materials 1</div>
+    </section>
+    <section hash="teachers2" layout vertical center-center>
+      <div>Teacher Materials 1</div>
     </section>
   </core-animated-pages>
 </div>
